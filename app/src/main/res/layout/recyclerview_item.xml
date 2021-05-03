@@ -1,15 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/recycler_item_constraint_layout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
+    tools:ignore="WebViewLayout">
 
     <TextView
         android:id="@+id/item_textView"
         style="@style/text_view_style"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="323dp"
+        android:layout_height="363dp"
+        android:layout_marginStart="53dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="53dp"
         android:background="@drawable/album_cell_select"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:text="placeholder text" />
-</LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="263dp"
+        android:layout_height="268dp"
+        app:layout_constraintBottom_toTopOf="@+id/album_name_textview"
+        app:layout_constraintEnd_toEndOf="@+id/item_textView"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="@+id/item_textView"
+        app:layout_constraintTop_toTopOf="@+id/item_textView"
+        app:layout_constraintVertical_bias="1.0">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <WebView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/album_name_textview"
+        app:layout_constraintEnd_toEndOf="@+id/constraintLayout"
+        app:layout_constraintStart_toStartOf="@+id/constraintLayout"
+        app:layout_constraintTop_toTopOf="@+id/constraintLayout" />
+
+    <TextView
+        android:id="@+id/album_name_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/recycler_album"
+        app:layout_constraintBottom_toTopOf="@+id/artist_textview"
+        app:layout_constraintEnd_toEndOf="@+id/item_textView"
+        app:layout_constraintStart_toStartOf="@+id/item_textView" />
+
+    <TextView
+        android:id="@+id/released_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/recycler_released"
+        app:layout_constraintBottom_toTopOf="@+id/comment_textview"
+        app:layout_constraintEnd_toEndOf="@+id/item_textView"
+        app:layout_constraintStart_toStartOf="@+id/item_textView" />
+
+    <TextView
+        android:id="@+id/comment_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/recycler_comment"
+        app:layout_constraintBottom_toBottomOf="@+id/item_textView"
+        app:layout_constraintEnd_toEndOf="@+id/item_textView"
+        app:layout_constraintStart_toStartOf="@+id/item_textView" />
+
+    <TextView
+        android:id="@+id/artist_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/recycler_artist"
+        app:layout_constraintBottom_toTopOf="@+id/released_textview"
+        app:layout_constraintEnd_toEndOf="@+id/item_textView"
+        app:layout_constraintStart_toStartOf="@+id/item_textView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

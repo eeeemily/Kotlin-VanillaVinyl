@@ -14,7 +14,6 @@ import com.mzheng9.vanillavinyl.ui.details.RecordsDisplayViewModel
 class HomeFragment : Fragment() {
     private val sharedViewModel: RecordsDisplayViewModel by activityViewModels()
     private var binding: FragmentHomeBinding? = null
-//    private var newFriend = Friend()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

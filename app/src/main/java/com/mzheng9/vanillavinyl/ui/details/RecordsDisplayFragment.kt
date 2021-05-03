@@ -3,10 +3,8 @@ package com.mzheng9.vanillavinyl.ui.details
 import android.app.AlertDialog
 import android.content.Context
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
@@ -35,8 +33,10 @@ class RecordsDisplayFragment : Fragment() {
                 findNavController().navigate(R.id.action_recordsDisplayFragment_to_dataEntryFragment)
             }
             albumsRecyclerview.run {
-                layoutManager = LinearLayoutManager(context)
+                layoutManager = LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false)
                 adapter = albumAdapter
+//                LinearLayoutManager layoutM = new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+
             }
         }
         return bindingMain.root
@@ -87,6 +87,15 @@ class RecordsDisplayFragment : Fragment() {
             }
             show()
         }
+    }
+//    override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
+//        setHasOptionsMenu(true)
+//        setPreferencesFromResource(R.xml.preferences_fragment, rootKey)
+//    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        menu.clear()
     }
 
 }
