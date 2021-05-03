@@ -3,7 +3,8 @@ package com.mzheng9.vanillavinyl.ui.main
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
-
+/*i don' need it?*
+ */
 class MainViewModel(application: Application) : AndroidViewModel(application) {
 
 //    init {
