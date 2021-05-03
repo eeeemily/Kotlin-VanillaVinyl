@@ -2,7 +2,6 @@ package com.mzheng9.vanillavinyl.ui.details
 
 import android.app.AlertDialog
 import android.content.Context
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -12,14 +11,16 @@ import android.widget.Toast
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.mzheng9.friends2.R
+import com.mzheng9.vanillavinyl.R
+import com.mzheng9.vanillavinyl.database.Album
 import com.mzheng9.vanillavinyl.databinding.RecordsdisplayFragmentBinding
 
 
 class RecordsDisplayFragment : Fragment() {
+
     private val sharedViewModel: RecordsDisplayViewModel by activityViewModels()
     private var binding: RecordsdisplayFragmentBinding? = null
-//    private val friendAdapter = Rec()
+    private val albumAdapter = AlbumAdapter()
 
     private var deletePosition: Int? = null
     override fun onCreateView(
@@ -30,12 +31,12 @@ class RecordsDisplayFragment : Fragment() {
         binding = bindingMain
 
         binding?.apply {
-            addFriendBtn.setOnClickListener {
-                findNavController().navigate(R.id.action_mainFragment_to_dataEntryFragment)
+            addAlbumBtn.setOnClickListener {
+                findNavController().navigate(R.id.action_recordsDisplayFragment_to_dataEntryFragment)
             }
-            friendsRecyclerview.run {
+            albumsRecyclerview.run {
                 layoutManager = LinearLayoutManager(context)
-//                adapter = friendAdapter
+                adapter = albumAdapter
             }
         }
         return bindingMain.root
@@ -43,18 +44,18 @@ class RecordsDisplayFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-//        sharedViewModel.friends.observe(viewLifecycleOwner, {
-//            friendAdapter.updateFriends(it)
-//        })
+        sharedViewModel.albums.observe(viewLifecycleOwner, {
+            albumAdapter.updateAlbums(it)
+        })
         binding?.apply {
-            removeFriendBtn.setOnClickListener {
+            removeAlbumBtn.setOnClickListener {
                 if (highlightedIndex != -1) {
-                    val thisFriend = friendAdapter.getFriendAtPosition(highlightedIndex)
-//                    context?.toast("Deleted: ${thisFriend.nickName}")
-                    itemDeletedAlert(thisFriend)
-//                    sharedViewModel.deleteFriend(friend = thisFriend)
+                    val thisAlbum = albumAdapter.getAlbumAtPosition(highlightedIndex)
+//                    context?.toast("Deleted: ${thisAlbum.nickName}")
+                    itemDeletedAlert(thisAlbum)
+//                    sharedViewModel.deleteAlbum(album = thisAlbum)
 //                    deletePosition = null
-                    findNavController().navigate(R.id.action_MainFragment_self)
+                    findNavController().navigate(R.id.action_recordsDisplayFragment_self)
                 }else{
                     context?.toast("You haven't select anyone!")
                 }
@@ -67,22 +68,22 @@ class RecordsDisplayFragment : Fragment() {
         binding = null
     }
 
-    fun itemDeletedAlert(friend: Friend) {
-        val msg = resources.getString(R.string.friend_deleted_alert, friend.firstName)
+    fun itemDeletedAlert(album: Album) {
+        val msg = resources.getString(R.string.album_deleted_alert, album.albumName)
         val builder = AlertDialog.Builder(context)
         with(builder) {
             setTitle(R.string.alert)
             setMessage(msg)
             setIcon(R.drawable.ic_baseline_notifications_active_24)
             setPositiveButton(R.string.yes) { _, _ ->
-                sharedViewModel.deleteFriend(friend)
+                sharedViewModel.deleteAlbum(album)
                 highlightedIndex = -1
-                context?.toast("Deleted: ${friend.nickName}")
+                context?.toast("Deleted: ${album.albumName}")
             }
             setNegativeButton(R.string.no) { _, _ ->
-                friendAdapter.notifyDataSetChanged()
+                albumAdapter.notifyDataSetChanged()
                 highlightedIndex = -1
-                context?.toast("You're still friends with ${friend.nickName}")
+                context?.toast("You're still album with ${album.albumName}")
             }
             show()
         }

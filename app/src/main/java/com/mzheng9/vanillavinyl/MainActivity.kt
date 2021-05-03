@@ -7,7 +7,6 @@ import android.view.MenuItem
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
-import com.mzheng9.friends2.R
 
 class MainActivity : AppCompatActivity() {
 
@@ -16,7 +15,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var navHostFragment: NavHostFragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
-//        setTheme(R.style.Theme_Friends2)
+        setTheme(R.style.Theme_VanillaVinyl)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_activity)
 

@@ -1,0 +1,64 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "7ab65822aa9e32a800e8192f8f1603e9",
+    "entities": [
+      {
+        "tableName": "album_table",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`album_ID` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `album_name` TEXT NOT NULL, `album_artist` TEXT NOT NULL, `album_release` TEXT NOT NULL, `album_cover_link` TEXT NOT NULL, `album_comment` TEXT NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "albumID",
+            "columnName": "album_ID",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "albumName",
+            "columnName": "album_name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "albumArtist",
+            "columnName": "album_artist",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "albumRelease",
+            "columnName": "album_release",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "albumCoverLink",
+            "columnName": "album_cover_link",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "albumComment",
+            "columnName": "album_comment",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "album_ID"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '7ab65822aa9e32a800e8192f8f1603e9')"
+    ]
+  }
+}

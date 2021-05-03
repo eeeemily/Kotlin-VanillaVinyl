@@ -11,10 +11,10 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
-//import com.mzheng9.friends2.R
 import com.mzheng9.vanillavinyl.ui.details.RecordsDisplayViewModel
 import com.mzheng9.vanillavinyl.R
-//import com.mzheng9.vanillavinyl.database.Friend
+import com.mzheng9.vanillavinyl.database.Album
+//import com.mzheng9.vanillavinyl.database.Album
 import com.mzheng9.vanillavinyl.databinding.FragmentDataEntryBinding
 
 class DataEntryFragment : Fragment() {
@@ -30,19 +30,19 @@ class DataEntryFragment : Fragment() {
         binding = dataEntryBinding
         binding?.apply {
             buttonAdd.setOnClickListener {
-//                val friend = Friend()
-//                friend.age = editFriendAge.text.toString()?.toInt()
-//                friend.firstName = editFriendFname.text.toString()
-//                friend.lastName = editFriendLname.text.toString()
-//                friend.nickName = editFriendNname.text.toString()
-//                friend.comment = editFriendComment.text.toString()
-//                sharedViewModel.insert(friend)
-                findNavController().navigate(R.id.action_dataEntryFragment_to_mainFragment)
+                val album = Album()
+                album.albumName = editAlbumName.text.toString()
+                album.albumArtist = editAlbumArtist.text.toString()
+                album.albumRelease = editAlbumRelease.text.toString()
+                album.albumCoverLink = editAlbumCoverLink.text.toString()
+                album.albumComment = editAlbumComment.text.toString()
+                sharedViewModel.addAlbum(album)
+                findNavController().navigate(R.id.action_dataEntryFragment_to_recordsDisplayFragment)
                 context?.hideKeyboard(it)
             }
             buttonCancel.setOnClickListener {
-                context?.toast("You didn't add a friend...")
-                findNavController().navigate(R.id.action_dataEntryFragment_to_mainFragment)
+                context?.toast("You didn't add a album...")
+                findNavController().navigate(R.id.action_dataEntryFragment_to_recordsDisplayFragment)
                 context?.hideKeyboard(it)
             }
         }

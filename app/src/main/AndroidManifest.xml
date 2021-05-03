@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.mzheng9.friends2"
+    package="com.mzheng9.vanillavinyl"
     tools:ignore="GoogleAppIndexingWarning">
 
     <application
@@ -15,14 +15,13 @@
             android:theme="@style/SplashScreenTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
         <provider
             android:name="androidx.core.content.FileProvider"
-            android:authorities="com.mzheng9.friends2.fileprovider"
+            android:authorities="com.mzheng9.vanillavinyl.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data

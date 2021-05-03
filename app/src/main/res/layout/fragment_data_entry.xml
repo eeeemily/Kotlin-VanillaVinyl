@@ -8,24 +8,9 @@
         android:layout_height="match_parent"
         tools:context=".DataEntryFragment">
 
-        <EditText
-            android:id="@+id/edit_friend_fname"
-            style="@style/text_view_style"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginEnd="32dp"
-            android:autofillHints=""
-            android:hint="@string/details_hint_enter_mbid"
-            android:inputType="text"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edit_friend_age" />
-
 
         <EditText
-            android:id="@+id/edit_friend_age"
+            android:id="@+id/edit_album_name"
             style="@style/text_view_style"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -39,8 +24,24 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
+
         <EditText
-            android:id="@+id/edit_friend_lname"
+            android:id="@+id/edit_album_artist"
+            style="@style/text_view_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:autofillHints=""
+            android:hint="@string/details_hint_enter_mbid"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_album_name" />
+
+        <EditText
+            android:id="@+id/edit_album_release"
             style="@style/text_view_style"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -52,10 +53,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edit_friend_fname" />
+            app:layout_constraintTop_toBottomOf="@+id/edit_album_artist" />
 
         <EditText
-            android:id="@+id/edit_friend_nname"
+            android:id="@+id/edit_album_cover_link"
             style="@style/text_view_style"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -68,10 +69,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edit_friend_lname" />
+            app:layout_constraintTop_toBottomOf="@+id/edit_album_release" />
 
         <EditText
-            android:id="@+id/edit_friend_comment"
+            android:id="@+id/edit_album_comment"
             style="@style/text_view_style"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -83,7 +84,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edit_friend_nname" />
+            app:layout_constraintTop_toBottomOf="@+id/edit_album_cover_link" />
 
         <Button
             android:id="@+id/button_add"

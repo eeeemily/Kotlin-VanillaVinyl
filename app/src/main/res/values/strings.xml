@@ -65,6 +65,11 @@
         <item>Groundboy</item>
         <item>Rocky</item>
     </string-array>
-
+    <!--    Alert-->
+    <string name="ok">OK</string>
+    <string name="alert">Attention</string>
+    <string name="album_deleted_alert">Are you absolutely sure you want to delete %s?  :(</string>
+    <string name="yes">Delete</string>
+    <string name="no">Still Friends</string>
 
 </resources>
