@@ -1,16 +1,22 @@
 package com.mzheng9.vanillavinyl.ui.details
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.webkit.WebView
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.mzheng9.vanillavinyl.R
 import com.mzheng9.vanillavinyl.database.Album
 import com.mzheng9.vanillavinyl.databinding.RecyclerviewItemBinding
 import com.mzheng9.vanillavinyl.ui.details.toast
+import com.squareup.picasso.Picasso
+import jp.wasabeef.picasso.transformations.GrayscaleTransformation
 
 var highlightedIndex: Int = -1
+private const val TAG = "WebviewFragment"
 
 class AlbumAdapter : RecyclerView.Adapter<AlbumAdapter.AlbumViewHolder>() {
 var albums: List<Album> = emptyList()
@@ -40,6 +46,11 @@ var albums: List<Album> = emptyList()
         RecyclerView.ViewHolder(binding.root), View.OnClickListener {
                 private lateinit var album: Album
         private val albumTextView: TextView = itemView.findViewById(R.id.item_textView)
+        private val albumNameTextView: TextView = itemView.findViewById(R.id.album_name_textview)
+        private val artistTextView: TextView = itemView.findViewById(R.id.artist_textview)
+        private val releasedTextView: TextView = itemView.findViewById(R.id.released_textview)
+        private val commentTextView: TextView = itemView.findViewById(R.id.comment_textview)
+        private val albumCoverImageView: ImageView = itemView.findViewById(R.id.album_imageview)
 
         init {
             itemView.setOnClickListener(this)
@@ -47,8 +58,16 @@ var albums: List<Album> = emptyList()
 
         fun bind(album: Album) {
             this.album = album
-            albumTextView.text =
-                    "Artist: " + album.albumArtist + " released: " + album.albumRelease
+            albumNameTextView.text = "Album Name"+ album.albumName
+            artistTextView.text = "Released: "+ album.albumArtist
+            releasedTextView.text = "Released: "+album.albumRelease
+            commentTextView.text = "Released: "+album.albumComment
+            when(album.albumCoverLink){
+                ""->loadUrl("https://coverartarchive.org/release-group/1237b040-fb8f-4f23-8000-fb6909486c83/front.jpg")
+                else->loadUrl("https://coverartarchive.org/release-group/485d3241-ef02-49a4-88df-a03eaa86d9cd/front.jpg")
+            }
+//            albumTextView.text =
+//                    "Artist: " + album.albumArtist + " released: " + album.albumRelease
         }
 
         override fun onClick(v: View?) {
@@ -68,6 +87,16 @@ var albums: List<Album> = emptyList()
                 albumTextView.setBackgroundResource(R.drawable.album_cell_selected_background)
           }
         }
+        private fun loadUrl(request: String) {
+            val picasso = Picasso.get()
+            picasso.load(request)
+                .placeholder(R.drawable.placeholder_ari)
+                .transform(GrayscaleTransformation())
+                .into(binding?.albumImageview)
+//            Log.d(TAG, "url in loadUrl: $request")
+//            binding?.albumWebview?.loadUrl(request)
+        }
+
 
     }
 }

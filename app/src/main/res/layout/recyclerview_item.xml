@@ -34,9 +34,12 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <WebView
+    <ImageView
+        android:id="@+id/album_imageview"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/placeholder_ari"
         app:layout_constraintBottom_toTopOf="@+id/album_name_textview"
         app:layout_constraintEnd_toEndOf="@+id/constraintLayout"
         app:layout_constraintStart_toStartOf="@+id/constraintLayout"

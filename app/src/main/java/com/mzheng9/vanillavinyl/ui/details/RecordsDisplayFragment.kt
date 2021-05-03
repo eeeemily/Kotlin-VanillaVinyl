@@ -35,7 +35,6 @@ class RecordsDisplayFragment : Fragment() {
             albumsRecyclerview.run {
                 layoutManager = LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false)
                 adapter = albumAdapter
-//                LinearLayoutManager layoutM = new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
 
             }
         }
