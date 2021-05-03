@@ -7,6 +7,19 @@
     <string name="details_frag_textview">Find Album Cover</string>
     <string name="details2_frag_textview">Find Artist</string>
 
+    <string name="home_welcome">Welcome to Vanilla Vinyl Record Store!</string>
+
+    <!--    btns-->
+    <string name="add_friend">Add a friend! :)</string>
+    <string name="remove_friend">Remove</string>
+    <string name="cancel_remove">Cancel Remove:)</string>
+
+    <string name="button_add">Add</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="prompt_add_freind">Made a new friend? <br />add them to the Friend List!</string>
+
+    <string name="your_friend_list">Your Friend List!</string>
+
     <!--    btns-->
     <string name="btnnav_album_btn">Album</string>
     <string name="btnnav_artist_btn">Artist</string>
@@ -27,5 +40,31 @@
     <string name="details_hint_enter_mbid">Enter your [MBID] to find the album cover!</string>
     <string name="details_hint_search_for_artist">Search for...[artist name]</string>
     <string name="details_hint_reseased">Released: </string>
+<!--    <string name="hello_blank_fragment">Hello blank fragment</string>-->
+
+
+    <!--    menu-->
+    <string name="settings">settings</string>
+    <string name="done">Done</string>
+
+    <!--    array-->
+    <string name="edit_profile">Edit Your User Profile</string>
+    <string name="fav_season">favorite season?</string>
+    <string name="userBirthYear">What is your birth year?</string>
+    <string name="mascot">fav UofR mascot</string>
+
+    <string-array name="seasonArray">
+        <item>Spring</item>
+        <item>Summer</item>
+        <item>Fall</item>
+        <item>Winter</item>
+    </string-array>
+
+    <string-array name="mascotArray">
+        <item>QuadFox</item>
+        <item>Groundboy</item>
+        <item>Rocky</item>
+    </string-array>
+
 
 </resources>

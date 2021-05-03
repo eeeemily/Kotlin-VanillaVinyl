@@ -1,11 +1,11 @@
 
-package com.mzheng9.vanillavinyl.ui.main
+package com.mzheng9.vanillavinyl.ui.details
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 /*i don' need it?*
  */
-class MainViewModel(application: Application) : AndroidViewModel(application) {
+class RecordsDisplayViewModel(application: Application) : AndroidViewModel(application) {
 
 //    init {
 //        FriendRepository.initialize(application)
