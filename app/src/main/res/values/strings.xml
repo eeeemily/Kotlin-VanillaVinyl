@@ -1,3 +1,31 @@
 <resources>
-    <string name="app_name">VanillaVinyl</string>
+    <string name="app_name">Vanilla Vinyl</string>
+    <!--    Fragment Names-->
+    <string name="settings_frag_textview">Settings</string>
+    <string name="info_frag_textview">Info</string>
+    <string name="main_frag_textview">Album Locator</string>
+    <string name="details_frag_textview">Find Album Cover</string>
+    <string name="details2_frag_textview">Find Artist</string>
+
+    <!--    btns-->
+    <string name="btnnav_album_btn">Album</string>
+    <string name="btnnav_artist_btn">Artist</string>
+    <string name="main_start_btn">Start Your Music Journey</string>
+
+    <!--    Setting Fragment-->
+    <string name="setting_colors">Colors</string>
+    <string name="setting_blue">Blues Blue</string>
+    <string name="setting_purple">Jazzy Purple</string>
+    <string name="setting_green">Grunge Green</string>
+    <string name="setting_pink">Pop Pink</string>
+
+    <!--    Info Fragment-->
+    <string name="info_version">Version: 1.0</string>
+    <string name="info_copy_right">Copyright &#169; 2021, EZ Corp</string>
+
+    <!--    Details Fragment-->
+    <string name="details_hint_enter_mbid">Enter your [MBID] to find the album cover!</string>
+    <string name="details_hint_search_for_artist">Search for...[artist name]</string>
+    <string name="details_hint_reseased">Released: </string>
+
 </resources>

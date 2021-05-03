@@ -1,10 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
+    <!--Blues Blue-->
+    <color name="dark_blue">#61799b</color>
+    <color name="medium_blue">#c9e7ff</color>
+    <color name="light_blue">#a5c7e2</color>
+    <color name="text_match_blue">#fef5b8</color>
+    <!--Jazzy Purple-->
+    <color name="dark_purple">#696b77</color>
+    <color name="medium_purple">#986285</color>
+    <color name="light_purple">#caabb8</color>
+    <color name="text_match_purple">#c7b7af</color>
+    <!--Grunge Green-->
+    <color name="dark_green">#4d6f75</color>
+    <color name="medium_green">#738c91</color>
+    <color name="light_green">#909f9c</color>
+    <color name="text_match_green">#d2ccc0</color>
+
+    <!--Pop Pink-->
+    <color name="dark_pink">#fea58e</color>
+    <color name="medium_pink">#d09890</color>
+    <color name="light_pink">#fedde4</color>
+    <color name="text_match_pink">#ffeab3</color>
+
+    <!-- others-->
+    <color name="green_200">#80CBC4</color>
+    <color name="green_700">#00796B</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 </resources>
