@@ -8,9 +8,26 @@
 <!--Fragment Specific Strings-->
     <string name="home_welcome">Welcome to the Record Store!</string>
 
+    <string-array name="effects" >
+        <item>Crop Square</item>
+        <item>Crop Circle</item>
+        <item>Blur</item>
+        <item>Pixelation</item>
+        <item>Invert</item>
+        <item>Rounded Corners</item>
+    </string-array>
 
-
-
+    <string-array name="effect_values" >
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    <string name="effect">Effect</string>
+    <string name="show_message">Show Message at Start</string>
+    <string name="show_now_picture">Show Now Picture</string>
 
 
 
@@ -81,11 +98,7 @@
         <item>Winter</item>
     </string-array>
 
-    <string-array name="mascotArray">
-        <item>QuadFox</item>
-        <item>Groundboy</item>
-        <item>Rocky</item>
-    </string-array>
+
     <!--    Alert-->
     <string name="ok">OK</string>
     <string name="alert">Attention</string>
