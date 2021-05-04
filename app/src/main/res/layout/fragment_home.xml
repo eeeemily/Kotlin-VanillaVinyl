@@ -18,7 +18,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/youralbum_textview"
         style="@style/title_text_view_style"
         android:layout_width="331dp"
         android:layout_height="92dp"
@@ -55,7 +55,7 @@
         android:layout_height="61dp"
         android:layout_marginTop="192dp"
         android:src="@drawable/ic_add_white_24dp"
-        app:backgroundTint="@color/light_green"
+        app:backgroundTint="@color/white"
         app:layout_constraintEnd_toEndOf="@+id/imageView2"
         app:layout_constraintHorizontal_bias="0.74"
         app:layout_constraintStart_toStartOf="@+id/imageView2"

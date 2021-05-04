@@ -3,6 +3,7 @@ package com.mzheng9.vanillavinyl.ui.info
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
+import com.mzheng9.vanillavinyl.BuildConfig
 import com.mzheng9.vanillavinyl.R
 import com.mzheng9.vanillavinyl.databinding.FragmentInfoBinding
 
@@ -28,14 +29,9 @@ class InfoFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding?.apply {
-//            buildTimeTextView.text = BuildConfig.BUILD_TIME
             titleTextView.text = resources.getString(R.string.app_name)
-//            versionTextView.text = BuildConfig.VERSION_NAME
+            versionTextView.text = BuildConfig.VERSION_NAME
             copyrightTextView.text = resources.getString(R.string.info_copy_right)
-
-//            if (BuildConfig.DEBUG) {
-//                debugBuildTextView.visibility = View.VISIBLE
-//            }
         }
     }
 

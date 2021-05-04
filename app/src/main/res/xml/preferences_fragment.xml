@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:key="show_now_image"
-        android:title="@string/show_now_picture"/>
+        android:title="@string/hide_comment"/>
 
     <ListPreference
         android:summary="%s"

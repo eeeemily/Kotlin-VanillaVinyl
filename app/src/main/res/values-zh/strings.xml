@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">香草唱片</string>
+    <!--    Fragment Names in Nav Controller-->
+    <string name="info_frag_textview">关于</string>
+    <string name="display_frag_textview">唱片收藏</string>
+    <string name="data_entry_frag_textview">添加一张专辑</string>
+    <string name="web_view_frag_textview">专辑浏览器</string>
+    <string name="dialog_frag_textview">个人设置</string>
+    <string name="settings">软件设置</string> <!-- also used in main_menu-->
+    <!--Fragment Specific Strings-->
+    <string name="home_welcome">收集所有你喜欢的专辑！</string>
+    <string name="main_start_btn">查看你的专辑收藏</string>
+    <string name="main_web_view_btn">在线浏览专辑</string>
+    <!--webview-->
+    <string name="go">走起</string>
+
+
+    <string-array name="effects">
+        <item>正方形裁剪</item>
+        <item>圆形裁剪</item>
+        <item>模糊化</item>
+        <item>像素化</item>
+        <item>负极</item>
+        <item>圆角</item>
+    </string-array>
+
+    <string-array name="effect_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    <string name="effect">专辑封面效果</string>
+    <string name="show_message">启动时先是信息</string>
+    <string name="hide_comment">隐藏评论</string>
+    <string name="message_body">隆重介绍你的专辑收藏集</string>
+    <string name="welcome">香草唱片</string>
+
+    <!--    btns-->
+    <string name="add_album">添加</string>
+    <string name="remove_album">删除</string>
+
+    <string name="button_add">添加</string>
+    <string name="button_cancel">取消</string>
+
+    <string name="your_album_list">你的唱片集</string>
+    <!--toaster-->
+    <string name="not_select_any_album_to_delete">你还未选中一张唱片</string>
+    <string name="deleted_colon">已删除: %s</string>
+    <string name="keep_colon">%s 仍在你的收藏集</string>
+
+    <string name="info_copy_right">版权 &#169; 2021, EZ Corp</string>
+
+    <!--    Details Fragment-->
+    <string name="details_hint_album_name">专辑名: </string>
+    <string name="details_hint_artist">歌手: </string>
+    <string name="details_hint_cover_link">唱片封面链接: </string>
+    <string name="details_hint_released">发行: </string>
+    <string name="details_hint_comment">评论: </string>
+    <string name="details_album_name">专辑名: %s</string>
+    <string name="details_artist">歌手: %s</string>
+    <string name="details_cover_link">唱片封面链接: %s</string>
+    <string name="details_released">发行: %s</string>
+    <string name="details_comment">评论: %s</string>
+
+    <string name="unselect_first">请先删除或取消已选中的专辑</string>
+    <string name="did_not_add">你没有添加新专辑…</string>
+
+
+    <!--Recycler View-->
+    <string name="recycler_album">专辑名: </string>
+    <string name="recycler_artist">歌手: </string>
+    <string name="recycler_released">发行: </string>
+    <string name="recycler_comment">评论: </string>
+    <!--    menu-->
+    <string name="done">结束</string>
+
+    <!--    array-->
+    <string name="edit_profile">编辑你的信息</string>
+    <string name="fav_season">你最喜欢的季节?</string>
+    <string name="user_name">输入你的用户名</string>
+    <string name="hint_user_name">在此输入你的用户名…</string>
+    <!--    <string name="mascot">fav UofR mascot</string>-->
+
+    <string-array name="seasonArray">
+        <item>春</item>
+        <item>夏</item>
+        <item>秋</item>
+        <item>冬</item>
+    </string-array>
+
+
+    <!--    Alert-->
+    <string name="ok">完成</string>
+    <string name="alert">注意</string>
+    <string name="album_deleted_alert">你确定你要删除 %s?  :(</string>
+    <string name="yes">删除</string>
+    <string name="no">保留！</string>
+    <string name="reset">重置</string>
+
+</resources>

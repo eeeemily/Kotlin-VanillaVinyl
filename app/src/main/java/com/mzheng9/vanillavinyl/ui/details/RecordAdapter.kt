@@ -22,6 +22,7 @@ import jp.wasabeef.picasso.transformations.gpu.PixelationFilterTransformation
 var highlightedIndex: Int = -1
 private const val TAG = "WebviewFragment"
 var effectGlobalIndex: Int = -1
+var hideCommentIndex: Int = 0
 class AlbumAdapter : RecyclerView.Adapter<AlbumAdapter.AlbumViewHolder>() {
 var albums: List<Album> = emptyList()
 
@@ -45,7 +46,11 @@ var albums: List<Album> = emptyList()
             effectGlobalIndex=effectIntdex
             notifyDataSetChanged()
     }
-
+    fun updateBG(bgIndex: Int) {
+//        if()
+        hideCommentIndex=bgIndex
+        notifyDataSetChanged()
+    }
     fun getAlbumAtPosition(position: Int): Album {
         return albums[position]
     }
@@ -59,6 +64,7 @@ var albums: List<Album> = emptyList()
         private val releasedTextView: TextView = itemView.findViewById(R.id.released_textview)
         private val commentTextView: TextView = itemView.findViewById(R.id.comment_textview)
         private val albumCoverImageView: ImageView = itemView.findViewById(R.id.album_imageview)
+//        private val backgroundView: TextView = itemView.findViewById(R.id.youralbum_textview) //not sure what type is it
 
         init {
             itemView.setOnClickListener(this)
@@ -69,7 +75,12 @@ var albums: List<Album> = emptyList()
             albumNameTextView.text = albumTextView.context.getString(R.string.details_album_name, album.albumName)
             artistTextView.text = artistTextView.context.getString(R.string.details_artist,album.albumArtist)
             releasedTextView.text = releasedTextView.context.getString(R.string.details_released,album.albumRelease)
-            commentTextView.text = commentTextView.context.getString(R.string.details_comment,album.albumComment)
+            if(hideCommentIndex==0){
+                commentTextView.text = commentTextView.context.getString(R.string.details_comment,album.albumComment)
+
+            }else{
+                commentTextView.text = ""
+            }
             when(album.albumCoverLink){
                 ""->loadUrl("https://coverartarchive.org/release-group/1237b040-fb8f-4f23-8000-fb6909486c83/front.jpg")
                 else->loadUrl(album.albumCoverLink)

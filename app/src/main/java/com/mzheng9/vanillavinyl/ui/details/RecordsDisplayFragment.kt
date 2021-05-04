@@ -12,6 +12,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.preference.PreferenceManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.mzheng9.vanillavinyl.MainActivity.Companion.EFFECT_SELECTION
+import com.mzheng9.vanillavinyl.MainActivity.Companion.SHOW_NOW_IMAGE
 import com.mzheng9.vanillavinyl.R
 import com.mzheng9.vanillavinyl.database.Album
 import com.mzheng9.vanillavinyl.databinding.RecordsdisplayFragmentBinding
@@ -43,7 +44,6 @@ class RecordsDisplayFragment : Fragment(), SharedPreferences.OnSharedPreferenceC
     ): View {
         val bindingMain = RecordsdisplayFragmentBinding.inflate(inflater, container, false)
         binding = bindingMain
-
         binding?.apply {
             addAlbumBtn.setOnClickListener {
                 findNavController().navigate(R.id.action_recordsDisplayFragment_to_dataEntryFragment)
@@ -59,6 +59,7 @@ class RecordsDisplayFragment : Fragment(), SharedPreferences.OnSharedPreferenceC
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setImage()
+        setBG()
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
@@ -70,13 +71,12 @@ class RecordsDisplayFragment : Fragment(), SharedPreferences.OnSharedPreferenceC
             removeAlbumBtn.setOnClickListener {
                 if (highlightedIndex != -1) {
                     val thisAlbum = albumAdapter.getAlbumAtPosition(highlightedIndex)
-//                    context?.toast("Deleted: ${thisAlbum.nickName}")
                     itemDeletedAlert(thisAlbum)
 //                    sharedViewModel.deleteAlbum(album = thisAlbum)
 //                    deletePosition = null
                     findNavController().navigate(R.id.action_recordsDisplayFragment_self)
                 } else {
-                    context?.toast("You haven't select anyone!")
+                    context?.toast(getString(R.string.not_select_any_album_to_delete))
                 }
             }
         }
@@ -99,20 +99,19 @@ class RecordsDisplayFragment : Fragment(), SharedPreferences.OnSharedPreferenceC
             setPositiveButton(R.string.yes) { _, _ ->
                 sharedViewModel.deleteAlbum(album)
                 highlightedIndex = -1
-                context?.toast("Deleted: ${album.albumName}")
+                context?.toast(getString(R.string.deleted_colon, album.albumName))
+//                context?.toast("Deleted: ${album.albumName}")
             }
             setNegativeButton(R.string.no) { _, _ ->
                 albumAdapter.notifyDataSetChanged()
                 highlightedIndex = -1
-                context?.toast("You're still album with ${album.albumName}")
+//                context?.toast(getString(R.string.deleted_colon, album.albumName))
+                context?.toast(getString(R.string.keep_colon, album.albumName))
             }
             show()
         }
     }
-//    override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
-//        setHasOptionsMenu(true)
-//        setPreferencesFromResource(R.xml.preferences_fragment, rootKey)
-//    }
+
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateOptionsMenu(menu, inflater)
@@ -124,28 +123,26 @@ class RecordsDisplayFragment : Fragment(), SharedPreferences.OnSharedPreferenceC
             EFFECT_SELECTION -> {
                 setImage()
             }
+            SHOW_NOW_IMAGE -> {
+                setBG()
+            }
+
         }
     }
+    private fun setBG() {
+        val resID = if (prefs.getBoolean(
+                SHOW_NOW_IMAGE,
+                false
+            )
+        ) 1 else 0
+            albumAdapter.updateBG(resID)
 
+    }
     private fun setImage() {
-        context?.toast("set image is called!!!")
-
         val effect = prefs.getString(EFFECT_SELECTION, "0")?.toInt()
         if(effect!=null){
-            context?.toast("Effect is not null!!! $effect")
             albumAdapter.updateAlbumImageView(effect)
         }
-
-//        val resID = if (prefs.getBoolean(
-//                SHOW_NOW_IMAGE,
-//                false
-//            )
-//        ) R.drawable.ur_rushrhees_new else R.drawable.ur_rushrhees_old
-//
-//        val picasso = Picasso.get()
-//        picasso.load(resID)
-//            .transform(effect)
-//            .into(urImageView)
     }
 
 }

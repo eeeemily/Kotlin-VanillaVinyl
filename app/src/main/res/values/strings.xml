@@ -34,45 +34,26 @@
     </string-array>
     <string name="effect">Effect</string>
     <string name="show_message">Show Message at Start</string>
-    <string name="show_now_picture">Show Now Picture</string>
-
-
-    <!--    ^necessary for the new one^-->
-    <!--    <string name="details_frag_textview">Find Album Cover</string>-->
-    <!--    <string name="details2_frag_textview">Find Artist</string>-->
-
+    <string name="hide_comment">Hide Comment</string>
     <string name="message_body">Introducing your digital album collections!</string>
     <string name="welcome">Vanilla Vinyl</string>
 
     <!--    btns-->
     <string name="add_album">Add</string>
     <string name="remove_album">Delete</string>
-    <string name="cancel_remove">Cancel Delete:)</string>
 
     <string name="button_add">Add</string>
     <string name="button_cancel">Cancel</string>
-    <string name="prompt_add_freind">Made a new album? <br />add them to the Friend List!</string>
 
     <string name="your_album_list">Your Albums</string>
+<!--toaster-->
+    <string name="not_select_any_album_to_delete">You have not select any album!</string>
+    <string name="deleted_colon">Deleted: %s</string>
+    <string name="keep_colon">%s is still in your collection!</string>
 
-    <!--    btns-->
-    <!--    <string name="btnnav_album_btn">Album</string>-->
-    <!--    <string name="btnnav_artist_btn">Artist</string>-->
-
-    <!--    Setting Fragment-->
-    <string name="setting_colors">Colors</string>
-    <string name="setting_blue">Blues Blue</string>
-    <string name="setting_purple">Jazzy Purple</string>
-    <string name="setting_green">Grunge Green</string>
-    <string name="setting_pink">Pop Pink</string>
-
-    <!--    Info Fragment-->
-    <string name="info_version">Version: 1.0</string>
     <string name="info_copy_right">Copyright &#169; 2021, EZ Corp</string>
 
     <!--    Details Fragment-->
-    <!--    <string name="details_hint_enter_mbid">Enter your [MBID] to find the album cover!</string>-->
-    <!--    <string name="details_hint_search_for_artist">Search for...[artist name]</string>-->
     <string name="details_hint_album_name">Album Name: </string>
     <string name="details_hint_artist">Artist: </string>
     <string name="details_hint_cover_link">Cover Art Url: </string>
@@ -85,7 +66,7 @@
     <string name="details_comment">Comment: %s</string>
 
     <string name="unselect_first">Unselect or delete the selected Album first!</string>
-    <string name="did_not_add">You did not add a album...</string>
+    <string name="did_not_add">You did not add a album…</string>
 
 
     <!--Recycler View-->
@@ -100,7 +81,7 @@
     <string name="edit_profile">Edit Your User Profile</string>
     <string name="fav_season">favorite season?</string>
     <string name="user_name">Enter your username</string>
-    <string name="hint_user_name">Enter username here...</string>
+    <string name="hint_user_name">Enter username here…</string>
 <!--    <string name="mascot">fav UofR mascot</string>-->
 
     <string-array name="seasonArray">
@@ -118,7 +99,5 @@
     <string name="yes">Delete</string>
     <string name="no">Keep it!</string>
     <string name="reset">Reset</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

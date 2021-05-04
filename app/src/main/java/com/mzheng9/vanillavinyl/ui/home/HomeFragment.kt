@@ -26,7 +26,6 @@ class HomeFragment : Fragment() {
         binding = fragmentHomeBinding
         binding?.apply {
 
-//            seasonSpinner.onItemSelectedListener = this@SettingsFragment
             startBtn.setOnClickListener {
                 findNavController().navigate(R.id.action_homeFragment_to_recordsDisplayFragment)
             }
@@ -36,20 +35,9 @@ class HomeFragment : Fragment() {
             addFab.setOnClickListener(){
                 findNavController().navigate(R.id.action_homeFragment_to_dialogFragment)
             }
-//            context?.apply {
-//                val aa = ArrayAdapter(this, android.R.layout.simple_spinner_item, YEARS)
-//                aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-//                birthSpinner.adapter = aa
-//                birthSpinner.onItemSelectedListener = this@SettingsFragment
-//            }
-//            settingsDoneButton.setOnClickListener {
-//                findNavController().navigate(R.id.action_settingsFragment_to_homeFragment)
-////                sharedViewModel.addFriend(newFriend)
-//            }
         }
         return fragmentHomeBinding.root
     }
-
 
     override fun onDestroyView() {
         super.onDestroyView()
