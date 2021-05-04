@@ -1,13 +1,25 @@
 <resources>
     <string name="app_name">Vanilla Vinyl</string>
-    <!--    Fragment Names-->
-    <string name="settings_frag_textview">Settings</string>
+    <!--    Fragment Names in Nav Controller-->
     <string name="info_frag_textview">Info</string>
-    <string name="main_frag_textview">Album Locator</string>
-    <string name="details_frag_textview">Find Album Cover</string>
-    <string name="details2_frag_textview">Find Artist</string>
+    <string name="display_frag_textview">Album Collections</string>
+    <string name="data_entry_frag_textview">Add An Album to Collection!</string>
+    <string name="settings">settings</string> <!-- also used in main_menu-->
+<!--Fragment Specific Strings-->
+    <string name="home_welcome">Welcome to the Record Store!</string>
 
-    <string name="home_welcome">Welcome to Vanilla Vinyl Record Store!</string>
+
+
+
+
+
+
+
+
+    <!--    ^necessary for the new one^-->
+<!--    <string name="details_frag_textview">Find Album Cover</string>-->
+<!--    <string name="details2_frag_textview">Find Artist</string>-->
+
     <string name="message_body">Welcome to the new TapTap app!</string>
     <string name="welcome">Welcome to Vanilla Vinyl Record Shop</string>
 
@@ -39,9 +51,13 @@
     <string name="info_copy_right">Copyright &#169; 2021, EZ Corp</string>
 
     <!--    Details Fragment-->
-    <string name="details_hint_enter_mbid">Enter your [MBID] to find the album cover!</string>
-    <string name="details_hint_search_for_artist">Search for...[artist name]</string>
-    <string name="details_hint_reseased">Released: </string>
+<!--    <string name="details_hint_enter_mbid">Enter your [MBID] to find the album cover!</string>-->
+<!--    <string name="details_hint_search_for_artist">Search for...[artist name]</string>-->
+    <string name="details_hint_album_name">Album Name: </string>
+    <string name="details_hint_artist">Artist: </string>
+    <string name="details_hint_cover_link">Cover Art Url: </string>
+    <string name="details_hint_released">Released: </string>
+    <string name="details_hint_comment">Comment: </string>
 <!--    <string name="hello_blank_fragment">Hello blank fragment</string>-->
 
 <!--Recycler View-->
@@ -50,7 +66,6 @@
     <string name="recycler_released">Released: </string>
     <string name="recycler_comment">Comment: </string>
     <!--    menu-->
-    <string name="settings">settings</string>
     <string name="done">Done</string>
 
     <!--    array-->

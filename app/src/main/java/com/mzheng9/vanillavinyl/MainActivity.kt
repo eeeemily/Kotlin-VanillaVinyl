@@ -39,6 +39,9 @@ class MainActivity : AppCompatActivity() {
             supportActionBar?.let {
                 it.title = when (destination.id) {
                     R.id.settingsFragment -> getString(R.string.settings)
+                    R.id.infoFragment -> getString(R.string.info_frag_textview)
+                    R.id.recordsDisplayFragment -> getString(R.string.display_frag_textview)
+                    R.id.dataEntryFragment -> getString(R.string.data_entry_frag_textview)
                     else -> getString(R.string.app_name)
                 }
             }
