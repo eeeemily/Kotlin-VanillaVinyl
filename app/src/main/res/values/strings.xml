@@ -4,6 +4,8 @@
     <string name="info_frag_textview">Info</string>
     <string name="display_frag_textview">CD Collections</string>
     <string name="data_entry_frag_textview">Add An Album</string>
+    <string name="web_view_frag_textview">Album Browswer</string>
+    <string name="dialog_frag_textview">Config</string>
     <string name="settings">settings</string> <!-- also used in main_menu-->
     <!--Fragment Specific Strings-->
     <string name="home_welcome">Organize All Your Albums Here!</string>
@@ -43,15 +45,15 @@
     <string name="welcome">Vanilla Vinyl</string>
 
     <!--    btns-->
-    <string name="add_friend">Add a friend! :)</string>
-    <string name="remove_friend">Remove</string>
-    <string name="cancel_remove">Cancel Remove:)</string>
+    <string name="add_album">Add</string>
+    <string name="remove_album">Delete</string>
+    <string name="cancel_remove">Cancel Delete:)</string>
 
     <string name="button_add">Add</string>
     <string name="button_cancel">Cancel</string>
-    <string name="prompt_add_freind">Made a new friend? <br />add them to the Friend List!</string>
+    <string name="prompt_add_freind">Made a new album? <br />add them to the Friend List!</string>
 
-    <string name="your_friend_list">Your Friend List!</string>
+    <string name="your_album_list">Your Albums</string>
 
     <!--    btns-->
     <!--    <string name="btnnav_album_btn">Album</string>-->
@@ -76,7 +78,15 @@
     <string name="details_hint_cover_link">Cover Art Url: </string>
     <string name="details_hint_released">Released: </string>
     <string name="details_hint_comment">Comment: </string>
-    <!--    <string name="hello_blank_fragment">Hello blank fragment</string>-->
+    <string name="details_album_name">Album Name: %s</string>
+    <string name="details_artist">Artist: %s</string>
+    <string name="details_cover_link">Cover Art Url: %s</string>
+    <string name="details_released">Released: %s</string>
+    <string name="details_comment">Comment: %s</string>
+
+    <string name="unselect_first">Unselect or delete the selected Album first!</string>
+    <string name="did_not_add">You did not add a album...</string>
+
 
     <!--Recycler View-->
     <string name="recycler_album">Album Name: </string>
@@ -89,8 +99,9 @@
     <!--    array-->
     <string name="edit_profile">Edit Your User Profile</string>
     <string name="fav_season">favorite season?</string>
-    <string name="userBirthYear">What is your birth year?</string>
-    <string name="mascot">fav UofR mascot</string>
+    <string name="user_name">Enter your username</string>
+    <string name="hint_user_name">Enter username here...</string>
+<!--    <string name="mascot">fav UofR mascot</string>-->
 
     <string-array name="seasonArray">
         <item>Spring</item>
@@ -105,7 +116,7 @@
     <string name="alert">Attention</string>
     <string name="album_deleted_alert">Are you absolutely sure you want to delete %s?  :(</string>
     <string name="yes">Delete</string>
-    <string name="no">Still Friends</string>
+    <string name="no">Keep it!</string>
     <string name="reset">Reset</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

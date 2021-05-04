@@ -30,8 +30,8 @@
         app:layout_constraintTop_toBottomOf="@+id/profile_textview">
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_height="199dp"
             android:layout_weight="3"
             android:gravity="start"
             android:orientation="vertical">
@@ -42,7 +42,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/fav_season"
-                android:textSize="12sp" />
+                android:textSize="20sp" />
 
             <Spinner
                 android:id="@+id/season_spinner"
@@ -51,35 +51,33 @@
                 android:layout_height="wrap_content"
                 android:entries="@array/seasonArray"
                 android:textAlignment="center" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="87dp"
+                android:layout_weight="3"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        style="@style/spinner_text_view_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:hint="@string/hint_user_name"
+                        android:textSize="16sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/published_container"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="2"
-            android:gravity="start"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/detail_published_textView"
-                style="@style/spinner_text_view_style"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/userBirthYear"
-                android:textSize="12sp" />
-
-            <Spinner
-                android:id="@+id/birth_spinner"
-                style="@style/spinner_style"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
     </LinearLayout>
 
     <TextView
         android:id="@+id/profile_textview"
         style="@style/title_text_view_style"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"

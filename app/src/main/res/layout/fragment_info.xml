@@ -5,15 +5,15 @@
     android:id="@+id/info_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/medium_blue"
+    android:background="@color/text_match_green"
     tools:context=".ui.info.InfoFragment">
 
     <TextView
         android:id="@+id/title_textView"
-        style="@style/text_view_style"
+        style="@style/title_text_view_style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="140dp"
         android:text="@string/app_name"
         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,21 +23,22 @@
 
     <TextView
         android:id="@+id/version_textView"
+        style="@style/title_text_view_style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        style="@style/text_view_style"
         app:layout_constraintTop_toBottomOf="@+id/title_textView"
         tools:text="1.0.0" />
 
     <TextView
         android:id="@+id/copyright_textView"
-        style="@style/text_view_style"
+        style="@style/title_text_view_style"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginBottom="60dp"
         android:text="@string/info_copy_right"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
@@ -45,15 +46,15 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="72dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="156dp"
-        android:src="@mipmap/ic_launcher_round"
+        android:layout_width="388dp"
+        android:layout_height="191dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/copyright_transparent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintHorizontal_bias="0.554"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/version_textView"
-        app:srcCompat="@mipmap/ic_launcher_round" />
+        app:srcCompat="@drawable/copyright_transparent" />
 
     <!--    <TextView-->
     <!--        android:id="@+id/build_time_textView"-->

@@ -3,9 +3,7 @@ package com.mzheng9.vanillavinyl.ui.details
 import android.app.Activity
 import android.content.Context
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import androidx.fragment.app.Fragment
@@ -41,14 +39,22 @@ class DataEntryFragment : Fragment() {
                 context?.hideKeyboard(it)
             }
             buttonCancel.setOnClickListener {
-                context?.toast("You didn't add a album...")
+                context?.toast(getString(R.string.did_not_add))
                 findNavController().navigate(R.id.action_dataEntryFragment_to_recordsDisplayFragment)
                 context?.hideKeyboard(it)
             }
         }
         return dataEntryBinding.root
     }
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setHasOptionsMenu(true)
+    }
 
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        menu.clear()
+    }
     override fun onDestroyView() {
         super.onDestroyView()
         binding = null

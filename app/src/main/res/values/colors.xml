@@ -7,10 +7,12 @@
     <color name="text_match_blue">#fef5b8</color>
     <!--Jazzy Purple-->
     <color name="dark_purple">#696b77</color>
+    <color name="dark_purple1">#AEA7A7</color>
     <color name="medium_purple">#986285</color>
     <color name="light_purple">#caabb8</color>
-    <color name="text_match_purple">#c7b7af</color>
+    <color name="text_match_purple">#B0A0A0</color>
     <!--Grunge Green-->
+    <color name="dark_green1">#444847</color>
     <color name="dark_green">#4d6f75</color>
     <color name="medium_green">#738c91</color>
     <color name="light_green">#909f9c</color>

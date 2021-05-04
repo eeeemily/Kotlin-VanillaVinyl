@@ -44,25 +44,6 @@ var albums: List<Album> = emptyList()
     fun updateAlbumImageView(effectIntdex: Int) {
             effectGlobalIndex=effectIntdex
             notifyDataSetChanged()
-
-
-
-//        val effect = when (effectIntdex) {
-//            0 -> CropSquareTransformation()
-//            1 -> CropCircleTransformation()
-//            2 -> BlurTransformation(context, 15, 1)
-//            3 -> PixelationFilterTransformation(context, 48.0f)
-//            4 -> InvertFilterTransformation(context)
-//            else -> RoundedCornersTransformation(85, 32)
-//        }
-//        val picasso = Picasso.get()
-//        picasso.load()
-//            .placeholder(R.drawable.placeholder_ari)
-//            .transform(effect)
-//            .into(binding?.albumImageview)
-//            albumAdapter.updateAlbums(effect)
-//
-//            this.albums = newAlbums
     }
 
     fun getAlbumAtPosition(position: Int): Album {
@@ -85,13 +66,13 @@ var albums: List<Album> = emptyList()
 
         fun bind(album: Album) {
             this.album = album
-            albumNameTextView.text = "Album Name"+ album.albumName
-            artistTextView.text = "Released: "+ album.albumArtist
-            releasedTextView.text = "Released: "+album.albumRelease
-            commentTextView.text = "Released: "+album.albumComment
+            albumNameTextView.text = albumTextView.context.getString(R.string.details_album_name, album.albumName)
+            artistTextView.text = artistTextView.context.getString(R.string.details_artist,album.albumArtist)
+            releasedTextView.text = releasedTextView.context.getString(R.string.details_released,album.albumRelease)
+            commentTextView.text = commentTextView.context.getString(R.string.details_comment,album.albumComment)
             when(album.albumCoverLink){
                 ""->loadUrl("https://coverartarchive.org/release-group/1237b040-fb8f-4f23-8000-fb6909486c83/front.jpg")
-                else->loadUrl("https://coverartarchive.org/release-group/485d3241-ef02-49a4-88df-a03eaa86d9cd/front.jpg")
+                else->loadUrl(album.albumCoverLink)
 //                else->loadUrl(album.albumCoverLink)
             }
 //            albumTextView.text =
@@ -106,7 +87,7 @@ var albums: List<Album> = emptyList()
                     highlightedIndex = -1
                     albumTextView.setBackgroundResource(R.drawable.album_cell_background)
                 } else {
-                    albumTextView.context?.toast("unselect/delete the selected Album first!")
+                    albumTextView.context?.toast(albumTextView.context.getString(R.string.unselect_first))
                 }
             }
             /*if no album is selected*/
@@ -116,8 +97,7 @@ var albums: List<Album> = emptyList()
           }
         }
         private fun loadUrl(request: String) {
-//            var localEffectIndex = -1
-            albumTextView.context?.toast("lodURL $effectGlobalIndex")
+
 
             val effect = when (effectGlobalIndex) {
                 0 -> CropSquareTransformation()
@@ -141,9 +121,6 @@ var albums: List<Album> = emptyList()
                     .into(binding?.albumImageview)
             }
 
-
-//            Log.d(TAG, "url in loadUrl: $request")
-//            binding?.albumWebview?.loadUrl(request)
         }
 
 

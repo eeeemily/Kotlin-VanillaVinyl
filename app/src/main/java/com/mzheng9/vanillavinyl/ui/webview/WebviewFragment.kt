@@ -3,11 +3,8 @@ package com.mzheng9.vanillavinyl.ui.webview
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import android.util.Log
-import android.view.KeyEvent
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.webkit.WebViewClient
 import com.mzheng9.vanillavinyl.databinding.WebviewFragmentBinding
 
@@ -19,7 +16,10 @@ class WebviewFragment : Fragment() {
     private val viewModel: WebviewViewModel by lazy {
         ViewModelProvider(this).get(WebviewViewModel::class.java)
     }
-
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setHasOptionsMenu(true)
+    }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -58,6 +58,10 @@ class WebviewFragment : Fragment() {
         binding = null
     }
 
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        menu.clear()
+    }
     private fun loadUrl(request: String) {
         Log.d(TAG, "url in loadUrl: $request")
         binding?.webView?.loadUrl(request)

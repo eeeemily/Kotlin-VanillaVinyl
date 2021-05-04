@@ -2,13 +2,14 @@
     <!-- Base application theme. -->
     <style name="Theme.VanillaVinyl" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/dark_blue</item>
-        <item name="colorPrimaryVariant">@color/medium_blue</item>
-        <item name="colorOnPrimary">@color/text_match_blue</item>
+        <item name="colorPrimary">@color/dark_purple</item>
+        <item name="colorPrimaryVariant">@color/dark_purple1</item>
+        <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/dark_purple</item>
         <item name="colorSecondaryVariant">@color/medium_purple</item>
         <item name="colorOnSecondary">@color/text_match_purple</item>
+<!--        <bakcground name="this">@color/text_match_purple</bakcground>-->
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->

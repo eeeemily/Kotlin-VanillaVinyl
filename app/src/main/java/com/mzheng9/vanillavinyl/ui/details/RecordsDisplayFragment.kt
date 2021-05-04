@@ -32,7 +32,11 @@ class RecordsDisplayFragment : Fragment(), SharedPreferences.OnSharedPreferenceC
     private val prefs: SharedPreferences by lazy {
         PreferenceManager.getDefaultSharedPreferences(activity)
     }
-    private var deletePosition: Int? = null
+//    private var deletePosition: Int? = null
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setHasOptionsMenu(true)
+    }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
