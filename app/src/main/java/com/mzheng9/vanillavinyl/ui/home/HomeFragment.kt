@@ -7,7 +7,7 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.mzheng9.vanillavinyl.R
 import com.mzheng9.vanillavinyl.databinding.FragmentHomeBinding
-import com.mzheng9.vanillavinyl.databinding.FragmentSettingsBinding
+import com.mzheng9.vanillavinyl.databinding.FragmentDialogBinding
 import com.mzheng9.vanillavinyl.ui.details.RecordsDisplayViewModel
 
 
@@ -32,6 +32,9 @@ class HomeFragment : Fragment() {
             }
             webViewBtn.setOnClickListener() {
                 findNavController().navigate(R.id.action_homeFragment_to_webviewFragment)
+            }
+            addFab.setOnClickListener(){
+                findNavController().navigate(R.id.action_homeFragment_to_dialogFragment)
             }
 //            context?.apply {
 //                val aa = ArrayAdapter(this, android.R.layout.simple_spinner_item, YEARS)

@@ -5,15 +5,15 @@
     <string name="display_frag_textview">CD Collections</string>
     <string name="data_entry_frag_textview">Add An Album</string>
     <string name="settings">settings</string> <!-- also used in main_menu-->
-<!--Fragment Specific Strings-->
-    <string name="home_welcome">Welcome to the Record Store!</string>
-    <string name="main_start_btn">Start Your Music Journey</string>
+    <!--Fragment Specific Strings-->
+    <string name="home_welcome">Organize All Your Albums Here!</string>
+    <string name="main_start_btn">View Your Album Collection</string>
     <string name="main_web_view_btn">Browse Album Online</string>
-<!--webview-->
+    <!--webview-->
     <string name="go">Go</string>
 
 
-    <string-array name="effects" >
+    <string-array name="effects">
         <item>Crop Square</item>
         <item>Crop Circle</item>
         <item>Blur</item>
@@ -22,7 +22,7 @@
         <item>Rounded Corners</item>
     </string-array>
 
-    <string-array name="effect_values" >
+    <string-array name="effect_values">
         <item>0</item>
         <item>1</item>
         <item>2</item>
@@ -35,15 +35,12 @@
     <string name="show_now_picture">Show Now Picture</string>
 
 
-
-
-
     <!--    ^necessary for the new one^-->
-<!--    <string name="details_frag_textview">Find Album Cover</string>-->
-<!--    <string name="details2_frag_textview">Find Artist</string>-->
+    <!--    <string name="details_frag_textview">Find Album Cover</string>-->
+    <!--    <string name="details2_frag_textview">Find Artist</string>-->
 
-    <string name="message_body">Welcome to the new TapTap app!</string>
-    <string name="welcome">Welcome to Vanilla Vinyl Record Shop</string>
+    <string name="message_body">Introducing your digital album collections!</string>
+    <string name="welcome">Vanilla Vinyl</string>
 
     <!--    btns-->
     <string name="add_friend">Add a friend! :)</string>
@@ -57,8 +54,8 @@
     <string name="your_friend_list">Your Friend List!</string>
 
     <!--    btns-->
-<!--    <string name="btnnav_album_btn">Album</string>-->
-<!--    <string name="btnnav_artist_btn">Artist</string>-->
+    <!--    <string name="btnnav_album_btn">Album</string>-->
+    <!--    <string name="btnnav_artist_btn">Artist</string>-->
 
     <!--    Setting Fragment-->
     <string name="setting_colors">Colors</string>
@@ -72,16 +69,16 @@
     <string name="info_copy_right">Copyright &#169; 2021, EZ Corp</string>
 
     <!--    Details Fragment-->
-<!--    <string name="details_hint_enter_mbid">Enter your [MBID] to find the album cover!</string>-->
-<!--    <string name="details_hint_search_for_artist">Search for...[artist name]</string>-->
+    <!--    <string name="details_hint_enter_mbid">Enter your [MBID] to find the album cover!</string>-->
+    <!--    <string name="details_hint_search_for_artist">Search for...[artist name]</string>-->
     <string name="details_hint_album_name">Album Name: </string>
     <string name="details_hint_artist">Artist: </string>
     <string name="details_hint_cover_link">Cover Art Url: </string>
     <string name="details_hint_released">Released: </string>
     <string name="details_hint_comment">Comment: </string>
-<!--    <string name="hello_blank_fragment">Hello blank fragment</string>-->
+    <!--    <string name="hello_blank_fragment">Hello blank fragment</string>-->
 
-<!--Recycler View-->
+    <!--Recycler View-->
     <string name="recycler_album">Album Name: </string>
     <string name="recycler_artist">Artist: </string>
     <string name="recycler_released">Released: </string>
@@ -110,5 +107,7 @@
     <string name="yes">Delete</string>
     <string name="no">Still Friends</string>
     <string name="reset">Reset</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
