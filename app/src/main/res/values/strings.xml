@@ -2,11 +2,16 @@
     <string name="app_name">Vanilla Vinyl</string>
     <!--    Fragment Names in Nav Controller-->
     <string name="info_frag_textview">Info</string>
-    <string name="display_frag_textview">Album Collections</string>
-    <string name="data_entry_frag_textview">Add An Album to Collection!</string>
+    <string name="display_frag_textview">CD Collections</string>
+    <string name="data_entry_frag_textview">Add An Album</string>
     <string name="settings">settings</string> <!-- also used in main_menu-->
 <!--Fragment Specific Strings-->
     <string name="home_welcome">Welcome to the Record Store!</string>
+    <string name="main_start_btn">Start Your Music Journey</string>
+    <string name="main_web_view_btn">Browse Album Online</string>
+<!--webview-->
+    <string name="go">Go</string>
+
 
     <string-array name="effects" >
         <item>Crop Square</item>
@@ -52,9 +57,8 @@
     <string name="your_friend_list">Your Friend List!</string>
 
     <!--    btns-->
-    <string name="btnnav_album_btn">Album</string>
-    <string name="btnnav_artist_btn">Artist</string>
-    <string name="main_start_btn">Start Your Music Journey</string>
+<!--    <string name="btnnav_album_btn">Album</string>-->
+<!--    <string name="btnnav_artist_btn">Artist</string>-->
 
     <!--    Setting Fragment-->
     <string name="setting_colors">Colors</string>

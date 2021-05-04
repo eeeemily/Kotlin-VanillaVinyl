@@ -19,6 +19,9 @@
         <action
             android:id="@+id/action_homeFragment_to_recordsDisplayFragment"
             app:destination="@id/recordsDisplayFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_webviewFragment"
+            app:destination="@id/webviewFragment" />
     </fragment>
     <fragment
         android:id="@+id/infoFragment"
@@ -60,5 +63,14 @@
         <action
             android:id="@+id/action_dataEntryFragment_to_recordsDisplayFragment"
             app:destination="@id/recordsDisplayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/webviewFragment"
+        android:name="com.mzheng9.vanillavinyl.ui.webview.WebviewFragment"
+        android:label="webview_fragment"
+        tools:layout="@layout/webview_fragment" >
+        <action
+            android:id="@+id/action_webviewFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
     </fragment>
 </navigation>

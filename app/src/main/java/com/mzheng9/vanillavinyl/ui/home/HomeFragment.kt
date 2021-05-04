@@ -27,9 +27,12 @@ class HomeFragment : Fragment() {
         binding?.apply {
 
 //            seasonSpinner.onItemSelectedListener = this@SettingsFragment
-        startBtn.setOnClickListener{
-            findNavController().navigate(R.id.action_homeFragment_to_recordsDisplayFragment)
-        }
+            startBtn.setOnClickListener {
+                findNavController().navigate(R.id.action_homeFragment_to_recordsDisplayFragment)
+            }
+            webViewBtn.setOnClickListener() {
+                findNavController().navigate(R.id.action_homeFragment_to_webviewFragment)
+            }
 //            context?.apply {
 //                val aa = ArrayAdapter(this, android.R.layout.simple_spinner_item, YEARS)
 //                aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
@@ -43,7 +46,6 @@ class HomeFragment : Fragment() {
         }
         return fragmentHomeBinding.root
     }
-
 
 
     override fun onDestroyView() {
