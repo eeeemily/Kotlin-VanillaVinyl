@@ -6,7 +6,7 @@
     <string name="data_entry_frag_textview">Add An Album</string>
     <string name="web_view_frag_textview">Album Browswer</string>
     <string name="dialog_frag_textview">Config</string>
-    <string name="settings">settings</string> <!-- also used in main_menu-->
+    <string name="settings">Settings</string> <!-- also used in main_menu-->
     <!--Fragment Specific Strings-->
     <string name="home_welcome">Organize All Your Albums Here!</string>
     <string name="main_start_btn">View Your Album Collection</string>
