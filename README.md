@@ -2,7 +2,7 @@
 This is an Android App written in Kotlin to help user add, edit and delete their favorite album covers in one place! User will have easy access to view the albums they love.
 
 ## App demo!
-[GitHub](https://github.com/eeeemily/CSC214-VanillaVinyl/blob/master/VanillaVinyl.gif)
+[Vanilla Vinyl - Album Library](https://github.com/eeeemily/CSC214-VanillaVinyl/blob/master/VanillaVinyl.gif)
 
 ## Functionality:
 - Store and manage album entries
